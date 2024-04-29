@@ -15,7 +15,13 @@ try {
 
 
 const {data} = await axios.post('/api/login', user);
-window.location.pathname = `/store/`
+if (data.role === 'admin') {
+  window.location.pathname = `/admin/`
+  
+} else {
+  window.location.pathname = `/store/`
+}
+
 console.log(data);
 } catch (error) {
   console.log(error);    
