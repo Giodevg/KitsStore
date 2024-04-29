@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<title>ADMIN</title>
+</head>
+<body class="bg-slate-200">
+    <nav  id="nav-bar" class=" top-0 right-0 left-0 bg-blue-400 h-16">
+    </nav>
+
+    <!-- Brands/Ligas -->
+    <section class="flex flex-col justify-center items-center gap-[121px] my-16 bg-blue-300 py-[61px] md:flex-row">
+        <div class="w-[150px]"><img src="/images/bocaaaa.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/Premier.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/cfc_png.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/MC.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/Barca.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img class="" src="/images/Champions.png" alt="" srcset=""></div>
+    </section>
+
+    <section class="">
+        <div id="shirts-creator" class="lg:flex lg:justify-center lg:items-center lg:h-screen">
+            <div class="lg:w-3/4 lg:rounded-md md:p-4">
+                <h3 class="font-bold text-2xl mb-4 text-center">Crear Nueva Camisa</h3>
+                <form id="shirts-form" class="flex flex-col gap-4">
+                    <label for="shirtName" class="font-bold md:px-24 xl:px-32">Nombre del Producto:</label>
+                    <input type="text" id="shirt-name" name="shirtName" required class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center">
+                    
+                    <label for="shirtImage" class="font-bold md:px-24 xl:px-32">Imagen:</label>
+                    <input type="file" id="shirt-image" name="shirtImage" accept="image/*" required class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center bg-white">
+        
+                    <label for="shirtPrice" class="font-bold md:px-24 xl:px-32">Precio:</label>
+                    <input type="number" id="shirt-price" name="shirtPrice" required step="0.01" class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center">
+        
+                    <label for="shirtSize" class="font-bold md:px-24 xl:px-32">Talla:</label>
+                    <select id="shirt-size" name="shirtSize" required class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+        
+                    <button type="submit" class="bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-600 transition duration-300 md:w-3/4 md:self-center">Crear Camisa</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="shirts-editor" class=" lg:justify-center lg:items-center lg:h-screen hidden">
+            <div class="lg:w-3/4 lg:rounded-md md:p-4">
+                <h3 class="font-bold text-2xl mb-4 text-center">Edita el Producto</h3>
+                <form id="shirts-form-edit" class="flex flex-col gap-4">
+                    <label for="shirtNameEdit" class="font-bold md:px-24 xl:px-32">Nombre del Producto:</label>
+                    <input type="text" id="shirt-name-edit" name="shirtNameEdit" required class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center">
+                    
+                    <label for="shirtImageEdit" class="font-bold md:px-24 xl:px-32">Imagen:</label>
+                    <input type="file" id="shirt-image-edit" name="shirtImageEdit" accept="image/*" required class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center bg-white">
+        
+                    <label for="shirtPriceEdit" class="font-bold md:px-24 xl:px-32">Precio:</label>
+                    <input type="number" id="shirt-price-edit" name="shirtPriceEdit" required step="0.01" class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center">
+        
+                    <label for="shirtSizeEdit" class="font-bold md:px-24 xl:px-32">Talla:</label>
+                    <select id="shirt-size-edit" name="shirtSizeEdit" required class="p-2 border border-gray-300 rounded-md md:w-3/4 md:self-center">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+        
+                    <button type="submit" class="bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-600 transition duration-300 md:w-3/4 md:self-center">Guardar Camisa</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Products -->
+    <section class="flex flex-col container items-start my-[190px] gap-28 mx-auto">
+        <div class="relative text-black self-center">
+            <h2 class="text-4xl font-black after:content-oval after:absolute after:left-[50%] after:-bottom-2.5 after:-z-10 md:text-5xl">
+                Nuestros Productos</h2>
+        </div>
+        <div id="shirts-container" class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[30px] gap-y-[30px] w-full transition-[0.3s] mt-[30px];">
+           
+            
+        </div>
+        
+    </section>
+
+   
+   
+</body>
+<script src="index.js"></script>
+<script src="/components/nav.js"></script>
+</html>

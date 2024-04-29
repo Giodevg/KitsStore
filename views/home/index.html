@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<title>KitsStore</title>
+</head>
+<body class="bg-slate-200">
+    <nav  id="nav-bar" class=" top-0 right-0 left-0 bg-blue-400 h-20">
+    </nav>
+    <!-- Banner -->
+    <section class="pt-16 w-full bg-cover bg-no-repeat bg-center bg-[url('/images/Banner.png')] md:bg-[url('/images/Banner.png')]">
+        <div class="pt-16 h-screen flex justify-center items-center flex-col md:flex-row lg:3/5 md:w-9/12 mx-auto px-4 gap-4 md:gap-8">
+            <div class="flex flex-col gap-4 md:text-xl">
+                <div class="flex flex-col items-start text-black md:pb-[68px] z-10  ">
+                    <h1 class="text-4xl font-black  leading-[125%]   sm:text-5xl md:text-[96px] md:leading-[125%]  "><span class="relative after:w-[120%] after:h-full after:bg-blue-400 after:block after:absolute after:-z-10 after:top-0 after:-rotate-2">KitsStore</span> 
+                    </h1>          
+            </div>
+        </div>
+        </section>
+    <!-- Brands/Ligas -->
+    <section class="flex flex-col justify-center items-center gap-[121px] right-0 left-0 my-16 bg-blue-300 py-[61px] md:flex-row">
+        <div class="w-[150px]"><img src="/images/bocaaaa.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/Premier.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/cfc_png.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/MC.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="/images/Barca.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img class="" src="/images/Champions.png" alt="" srcset=""></div>
+    </section>
+    <!-- Los muchachos/modelos -->
+    <section class="flex flex-col container items-start gap-28 mx-auto px-[10px]">
+        <div class="relative text-black">
+            <h2
+                class="text-4xl font-black after:content-oval after:absolute after:left-[50%] after:-bottom-2.5 after:-z-10 md:text-5xl">
+                </h2>
+        </div>
+        <div class="grid grid-flow-row grid-row-1 gap-24 md:grid-flow-col md:grid-cols-3 ">
+            <!-- cards -->
+            <div class="flex flex-col w-full gap-7">
+                <img class="w-full h-[704px] object-cover object-[75%] rounded-[20px] bg-slate-400" src="/images/MessiInter.png" />
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-col self-center">
+                        <h3 class="text-[32px] font-bold ">Camisas de todos los Equipos</h3>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col w-full gap-7">
+                <img class="w-full h-[704px] object-cover object-[34%] rounded-[20px] bg-slate-400" src="/images/MIPADRE.png" />
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-col">
+                        <h3 class="text-[32px] font-bold">Camisas de entrenamiento</h3>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col w-full gap-7">
+                <img class="w-full h-[704px] object-cover object-[47%] rounded-[20px] bg-slate-400" src="/images/Salomon.png" />
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-col text-center">
+                        <h3 class="text-[32px] font-bold p-6">Selecciones</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- Products -->
+    <section class="flex flex-col container items-start my-[190px] gap-28 mx-auto">
+        <div  class="relative text-black self-center">
+            <h2 class="text-4xl font-black after:content-oval after:absolute after:left-[50%] after:-bottom-2.5 after:-z-10 md:text-5xl">
+                Nuestros Productos</h2>
+        </div>
+        <div id="shirts-container" class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[30px] gap-y-[30px] w-full transition-[0.3s] mt-[30px];">
+            
+            
+            
+        </div>
+        
+       
+    </section>
+
+
+   
+    
+</body>
+<script src="index.js"></script>
+<script src="/components/nav.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
